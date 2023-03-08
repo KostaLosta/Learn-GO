@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 )
-
+// Митрик Привет
 func main() {
 
 	slice1 := []int{1, 2, 3}
