@@ -6,15 +6,22 @@ import (
 
 func main() {
 
-	slice1 := []int{1, 2, 3}
+	type Parent struct{}
 
-	slice2 := make([]int, 0)
-
-	for i, v := range slice1 {
-		if v = 1 {
-			slice2 = append(slice2, v)
-
-		}
+	(func(c *Parent) Print)()
+	{
+		fmt.Println("parent")
 	}
-	fmt.Println(slice2)
+
+	type Child struct {
+		Parent
+	}
+	(func(p *Child) Print)()
+	{
+		fmt.Println("child")
+
+	}
+	var x Child
+
+	x.Print()
 }
