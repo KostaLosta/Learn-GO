@@ -1,20 +1,32 @@
 package main
 
-import (
-	"fmt"
-)
+type man struct {
+	name string
+	age  int
+}
+
+type woman struct {
+	name string
+	age  int
+}
+
+type skillz interface {
+	work()
+	rest()
+}
+
+func (m man) work(s string) {
+	return
+}
+
+func (w woman) rest(r string) {
+	return
+}
 
 func main() {
+	dima := man{name: "Дима", age: 31}
+	lena := woman{name: "Лена", age: 30}
+	dima.work()
+	lena.rest()
 
-	slice1 := []int{1, 2, 3}
-
-	slice2 := make([]int, 0)
-
-	for i, v := range slice1 {
-		if v = 1 {
-			slice2 = append(slice2, v)
-
-		}
-	}
-	fmt.Println(slice2)
 }
